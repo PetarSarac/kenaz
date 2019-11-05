@@ -62,7 +62,7 @@ export default {
 }
 
 .navbar {
-    padding: 0;
+    padding: 0 !important;
 }
 .nav-link {
     color:white !important;
