@@ -1,0 +1,29 @@
+
+$theme-colors: (
+    "primary": #4d4382,
+    "primary-dark": #3e3668,
+    "dark-gray": #252525,
+    "gray": #333,
+    "gray2": #666,
+    "gray3": #828282,
+    "light-blue": #45b0e3
+);
+  
+$body-bg: #eee;
+$font-family-base: 'Bitter', serif;
+
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+:root{
+    --blue: #3677b5;
+    --light-blue: #299ec3;
+    --green: #84c14f;
+    --red: #ee6151;
+    --yellow: #fcc44d;
+    --brown: #a99765;
+    --light-gray: #dddddd;
+    --dark-gray: #252525;
+    --primary: #4d4382;
+}
