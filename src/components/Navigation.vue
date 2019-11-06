@@ -1,26 +1,38 @@
 <template>
 <div>
-    <b-navbar type="dark" variant="dark-gray">
+    <div class="bg-dark-gray">
         <b-container>
-            <b-row class="w-100 align-items-center">
-                <b-col cols="6">
-                            <b-navbar-brand href="/">Kenaz</b-navbar-brand>          
-                </b-col>
-                <b-col cols="6">
-    
-                    <b-navbar-nav class="ml-auto justify-content-end">
-                        <b-nav-form>
-                            <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
-                            <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-                        </b-nav-form>
-                    </b-navbar-nav>
+            <b-row>
+                <b-col cols="12">
+                    <div class="d-flex flex-md-row flex-column align-items-center">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-gray py-3 px-4">
+                                <img src="@/assets/LeftArrow-white.png" alt="Arrow left">
+                            </div>
+                            <h2 class="text-white ml-2">
+                                <router-link to="/" class="text-white">Kenaz</router-link>
+                            </h2>
+                        </div>
+                        
+
+
+                        <div class="d-flex ml-auto align-items-center">
+                            <b-form @submit.prevent="submitSearch" class="d-flex" v-if="SearchExpanded">
+                                <b-form-input v-model="searchInput" placeholder="Search..." class="p-2"></b-form-input>
+                                <b-form-select v-model="selectedCategory" :options="options" class="py-2 pr-4 mx-2"></b-form-select>
+                            </b-form>
+                            <div class="bg-gray py-3 px-4 search-box mr-md-0" @click="SearchExpanded = !SearchExpanded">
+                                <img src="@/assets/search-icon.png" alt="Search icon">
+                            </div>
+                        </div>
+                    </div>
                 </b-col>
             </b-row>
   
           
         </b-container>
 
-    </b-navbar>
+    </div>
 
     <b-navbar toggleable="lg" type="dark" variant="primary">
         <b-container class="justify-content-lg-start justify-content-center">
@@ -29,14 +41,31 @@
                     <b-navbar-toggle target="nav-collapse" class="m-2"></b-navbar-toggle>
                         <b-collapse id="nav-collapse" is-nav>
                             <b-navbar-nav>
-                                <b-nav-item href="#" class="nav-item-border--news">NEWS</b-nav-item>
-                                <b-nav-item href="#" class="nav-item-border--business">BUSINESS</b-nav-item>
-                                <b-nav-item href="#" class="nav-item-border--entertainment">ENTERTAINMENT</b-nav-item>
-                                <b-nav-item href="#" class="nav-item-border--general">GENERAL</b-nav-item>
-                                <b-nav-item href="#" class="nav-item-border--health">HEALTH</b-nav-item>
-                                <b-nav-item href="#" class="nav-item-border--science">SCIENCE</b-nav-item>
-                                <b-nav-item href="#" class="nav-item-border--sports">SPORTS</b-nav-item>
-                                <b-nav-item href="#" class="nav-item-border--technology">TECHNOLOGY</b-nav-item>
+                                <router-link tag="b-nav-item" class="nav-item-border--news" to="/news">
+                                    NEWS
+                                </router-link>
+                                <router-link tag="b-nav-item" class="nav-item-border--business" to="/business">
+                                    BUSINESS
+                                </router-link>
+                                <router-link tag="b-nav-item" class="nav-item-border--entertainment" to="/entertainment">
+                                    ENTERTAINMENT
+                                </router-link>
+                                <router-link tag="b-nav-item" class="nav-item-border--general" to="/general">
+                                    GENERAL
+                                </router-link>
+                                <router-link tag="b-nav-item" class="nav-item-border--health" to="/health">
+                                    HEALTH
+                                </router-link>
+                                <router-link tag="b-nav-item" class="nav-item-border--science" to="/science">
+                                    SCIENCE
+                                </router-link>
+                                <router-link tag="b-nav-item" class="nav-item-border--sports" to="/sports">
+                                    SPORTS
+                                </router-link>
+                                <router-link tag="b-nav-item" class="nav-item-border--technology" to="/technology">
+                                    TECHNOLOGY
+                                </router-link>
+ 
                             </b-navbar-nav>
                         </b-collapse> 
                 </b-col>
@@ -49,9 +78,32 @@
 </template>
 
 <script>
-export default {
-    name:"Navigation"
-}
+ export default {
+     name: "Navigation",
+    data() {
+      return {
+        selected: null,
+        options: [
+          { value: null, text: 'Select Category' },
+          { value: 'business', text: 'Business' },
+          { value: 'entertainment', text: 'Entertainment' },
+          { value: 'general', text: 'General' },
+          { value: 'health', text: 'Health'},
+          { value: 'science', text: 'Science'},
+          { value: 'sports', text: 'Sports'},
+          { value: 'technology', text: 'Technology'}
+        ],
+        searchInput: '',
+        selectedCategory: '',
+        SearchExpanded: false
+      }
+    },
+    methods: {
+        submitSearch(){
+            this.$router.push({ path: '/' + this.selectedCategory , query: { q:this.searchInput} })
+        }
+    }
+  }
 </script>
 
 <style lang="scss">
@@ -116,6 +168,14 @@ export default {
         &:hover {
             background-color: chartreuse;
         }
+    }
+}
+
+.search-box {
+    cursor: pointer;
+    margin-right: -15px;
+    &:hover {
+        background-color: var(--primary) !important;
     }
 }
 </style>
