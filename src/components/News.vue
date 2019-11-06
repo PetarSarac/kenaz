@@ -1,14 +1,10 @@
 <template>
-
-<b-container class="bg-white p-4 news" :style="'border-left:10px solid ' + color">
+<div>
+<b-container v-if="type == 1 || type == 2" class="bg-white p-4 news" :style="'border-left:10px solid ' + color">
   <div v-if="type == 1"> <!-- TYPE 1 ----------------->
     <b-row class="align-items-center">
       <b-col cols="6">
         <h2>{{newsCategory}}</h2>
-        <p v-if="isBusy">Loading</p>
-        <form @submit.prevent="fetchSearchNews">
-          <input type="text" placeholder="Search..." v-model="searchWord">
-        </form>
       </b-col>
       <b-col cols="6" class="text-right">
         <router-link :to="'/'+ newsCategory" class="text-light-blue">See all</router-link>
@@ -16,7 +12,8 @@
     </b-row>
 
     <b-row>
-      <b-col md="6" lg="4" cols="12" v-for="(article,index) in articles" :key="index" @click="goToArticle(article)">
+      <b-col md="6" lg="4" cols="12" v-for="(article,index) in articles" :key="index" 
+      class="news-single--big" @click="goToArticle(article)">
         <div class="news-single mt-4">
           <img v-if="article.urlToImage" :src="article.urlToImage" alt="No image">
           <div class="d-flex mt-1 text-gray2">
@@ -39,17 +36,19 @@
     </b-row>
 
     <b-row>
-      <b-col cols="12" class="mb-4 border-bottom border-gray2" v-for="(article,index) in articles" :key="index">
+      <b-col cols="12" class="mb-4 border-bottom border-gray2 news-single--big" v-for="(article,index) in articles" :key="index"
+            @click="goToArticle(article)"
+      >
         <h5 class="font-weight-bold mb-4">{{article.title}}</h5>
         <div class="d-flex text-gray2 justify-content-between mb-4">
           <p>{{article.publishedAt}}</p>
           <p v-if="article.author">Author: {{article.author}}</p>
         </div>
         <b-row class="news-single mb-4">
-          <b-col cols="4">
+          <b-col sm="4" cols="12">
             <img v-if="article.urlToImage" :src="article.urlToImage" alt="No image">
           </b-col>
-          <b-col cols="8" class="text-gray">
+          <b-col sm="8" cols="12" class="text-gray">
             <p>{{article.description}}</p>
             <b-button @click="goToArticle(article)" class="mt-4 bg-primary rounded-0 px-4">Read article</b-button>
           </b-col>
@@ -57,9 +56,22 @@
       </b-col>
     </b-row>
   </div>
-  
-
 </b-container>
+
+<!-- Type 3 ----->
+<div v-if="type == 3">
+  <b-row  class="sidebar-item bg-primary py-4 px-2 border-bottom border-primary-dark"
+          v-for="(article,index) in articles" :key="index">
+    <b-col cols="8">
+        <small class="mb-0 text-gray3">{{article.publishedAt}}</small>
+        <p class="mb-0 text-white font-weight-bold">{{article.title}}</p>
+    </b-col>
+    <b-col cols="4" class="align-self-center">
+        <img class="border border-white sidebar-img" :src="article.urlToImage" alt="News">
+    </b-col>
+  </b-row>
+</div>
+</div>
 </template>
 <script>
 export default {
@@ -173,6 +185,11 @@ export default {
     cursor: pointer;
     & img {
       width: 100%;
+    }
+
+    &--big:hover {
+      cursor: pointer;
+      background-color: rgb(245, 245, 245);
     }
   }
 }

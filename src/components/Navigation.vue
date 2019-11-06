@@ -17,11 +17,11 @@
 
 
                         <div class="d-flex ml-auto align-items-center">
-                            <b-form @submit.prevent="submitSearch" class="d-flex" v-if="SearchExpanded">
+                            <b-form @submit.prevent="submitSearch" class="d-flex">
                                 <b-form-input v-model="searchInput" placeholder="Search..." class="p-2"></b-form-input>
                                 <b-form-select v-model="selectedCategory" :options="options" class="py-2 pr-4 mx-2"></b-form-select>
                             </b-form>
-                            <div class="bg-gray py-3 px-4 search-box mr-md-0" @click="SearchExpanded = !SearchExpanded">
+                            <div class="bg-gray py-3 px-4 search-box mr-md-0" @click="submitSearch">
                                 <img src="@/assets/search-icon.png" alt="Search icon">
                             </div>
                         </div>
@@ -94,8 +94,7 @@
           { value: 'technology', text: 'Technology'}
         ],
         searchInput: '',
-        selectedCategory: '',
-        SearchExpanded: false
+        selectedCategory: ''
       }
     },
     methods: {

@@ -14,7 +14,7 @@
                         <img :src="article.article.urlToImage" class="w-100" alt="No Image">
                         <div class="news-big-image__title">
                             <small>{{article.article.publishedAt}}</small>
-                            <h2 class="font-weight-bold">{{article.article.title}}</h2>     
+                            <h5 class="font-weight-bold">{{article.article.title}}</h5>     
                         </div>
                            
                     </div>
@@ -76,7 +76,8 @@ export default {
     &__title {
         position: absolute !important;
         bottom: 0px;
-        padding: 220px 220px 30px 30px;
+        padding: 20px;
+        width: 100%;
         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255));
     }
 }
