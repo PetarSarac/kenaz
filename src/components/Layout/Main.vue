@@ -38,9 +38,9 @@
 </template>
 
 <script>
-import Carousel from './Carousel.vue'
-import News from './News.vue'
-import Sidebar from './Sidebar.vue'
+import Carousel from '../Objects/Carousel'
+import News from '../Objects/News'
+import Sidebar from '../UI/Sidebar'
 
 export default {
   name: 'Main',

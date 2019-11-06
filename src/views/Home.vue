@@ -7,10 +7,9 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import Main from '@/components/Main.vue'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Main from '@/components/Layout/Main.vue'
+import Header from '../components/Layout/Header'
+import Footer from '../components/Layout/Footer'
 
 export default {
   name: 'home',

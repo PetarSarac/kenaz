@@ -51,8 +51,8 @@
 </template>
 
 <script>
-import Footer from '../components/Footer'
-import Sidebar from '../components/Sidebar'
+import Footer from '../components/Layout/Footer'
+import Sidebar from '../components/UI/Sidebar'
 //import News from '../components/News'
 
 export default {

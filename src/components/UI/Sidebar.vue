@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import News from '../components/News'
+import News from '../Objects/News'
 
 export default {
     components:{

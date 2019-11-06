@@ -28,10 +28,10 @@
 </template>
 
 <script>
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Sidebar from '../components/Sidebar'
-import News from '../components/News'
+import Header from '../components/Layout/Header'
+import Footer from '../components/Layout/Footer'
+import Sidebar from '../components/UI/Sidebar'
+import News from '../components/Objects/News'
 
 export default {
     data(){
