@@ -1,0 +1,39 @@
+{
+    "navigation" : {
+        "news" : "VIJESTI",
+        "business" : "BIZNIS",
+        "entertainment" : "ZABAVA",
+        "general" : "OPĆENITO",
+        "health" : "ZDRAVLJE",
+        "science" : "ZNANOST",
+        "sports" : "SPORT",
+        "technology" : "TEHNOLOGIJA"
+    },
+    "see-all" : "Pogledaj sve",
+    "News" : "Vijesti",
+    "Business" : "Biznis",
+    "Entertainment" : "Zabava",
+    "General" : "Općenito",
+    "Health" : "Zdravlje",
+    "Science" : "Znanost",
+    "Sports" : "Sport",
+    "Technology" : "Tehnologija",
+    "World": "Svijet",
+    "Germany": "Njemačka",
+    "Local news": "Lokalne vijesti",
+    "ReadArticle": "Pročitaj članak",
+    "Author": "Autor",
+    "NoResults": "Nema rezultata",
+    "YourSearch": "Vaša pretraga",
+    "Subscribe": "Pošalji",
+    "FooterCopyRight": "Ponosno napravljeno u Plava Tvornica Hrvatska",
+    "AboutTheAuthor": "O Autoru",
+    "Comments": "Komentari",
+    "AddYourComments": "Dodajte vaš komentar",
+
+    "sidebar": {
+        "Popular" : "Popularne",
+        "TopRated": "Ocjenjene",
+        "Comments": "Komentari"
+      }
+}

@@ -3,14 +3,25 @@
   <b-container>
       <b-row>
         <b-col lg="8" cols="12" class="mt30px">
-          <app-news class="mb30px" newsCategory="News" type="1" numberOfNews="3" color="#299ec3"></app-news> <!-- Change later margin -->
-          <app-news newsCategory="Sports" type="1" numberOfNews="3" color="#84c14f"></app-news>
+          <app-news class="mb30px" newsCategory="News" selectedCountry="us" type="1" numberOfNews="3" color="#299ec3"></app-news> <!-- Change later margin -->
+          <app-news newsCategory="Sports" selectedCountry="us" type="1" numberOfNews="3" color="#84c14f"></app-news>
 
           <div class="banner mt30px mb30px">Banner 620x120</div>
-          <app-news newsCategory="Business" type="1" numberOfNews="3" color="#ee6151"></app-news>
+          <app-news newsCategory="Business" selectedCountry="us" type="1" numberOfNews="3" color="#ee6151"></app-news>
           <div class="banner mt30px">Banner 620x120</div>
-          <!--<app-news class="mt30px"></app-news>-->
+          
+          <app-news class="mt30px" newsCategory="News" newsFrom="World" selectedCountry="us" type="5" numberOfNews="5" color="#fcc44d"></app-news>
+
+          <b-row>
+            <b-col md="6" cols="12">
+              <app-news class="mt30px" newsCategory="News" newsFrom="Germany" selectedCountry="de" type="5" numberOfNews="5" color="#a99765"></app-news>
+            </b-col>
+            <b-col md="6" cols="12">
+              <app-news class="mt30px" newsCategory="News" newsFrom="Local news" selectedCountry="rs" type="5" numberOfNews="5" color="#a99765"></app-news>
+            </b-col>
+          </b-row>
         </b-col>
+        
         
         
         <b-col lg="4" cols="12" class="mt30px">

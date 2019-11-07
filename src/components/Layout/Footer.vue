@@ -58,7 +58,7 @@
                 <b-col cols="12">
                     <div class="d-flex">
                         <input type="text" class="bg-gray border-0 rounded-0 p-2 text-white">
-                        <b-button class="bg-primary border-0 p-3 rounded-0">Subscribe</b-button> 
+                        <b-button class="bg-primary border-0 p-3 rounded-0">{{$t('Subscribe')}}</b-button> 
                     </div>
                     
                 </b-col>
@@ -93,16 +93,7 @@
           </b-container>
         </b-col>
       </b-row>
-      <b-container>
-        <b-row>
-          <b-col cols="6" class="mt-lg-0 mt-4 text-center">
-            <h4>Featured</h4>
-          </b-col>
-          <b-col cols="6" class="mt-lg-0 mt-4 text-center">
-            <h4>Random Posts</h4>
-          </b-col>
-        </b-row>
-      </b-container>
+      
       
     </b-container>
 
@@ -111,7 +102,7 @@
     <b-container>
       <b-row class="pb-4">
         <b-col md="6" cols="12">
-          <p class="mb-0 text-gray3 text-md-left text-center">&copy; 2013 - Kenaz Template - Produly made at Plava Tvornica Croatia</p>
+          <p class="mb-0 text-gray3 text-md-left text-center">&copy; 2013 - Kenaz Template - {{$t('FooterCopyRight')}}</p>
         </b-col>
         <b-col md="6" cols="12">
           <p class="mb-0 text-gray3 text-md-right text-center">Typografy - Templates - Contact Form - 404 page</p>

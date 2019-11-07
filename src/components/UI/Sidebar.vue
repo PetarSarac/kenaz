@@ -2,17 +2,17 @@
     <b-container class="bg-primary-dark">
         <b-row class="p-3 text-white">
         <b-col cols="4">
-            <p class="sidebar-nav sidebar-nav--active mb-0 text-center">Popular</p>
+            <p class="sidebar-nav sidebar-nav--active mb-0 text-center">{{$t('sidebar.Popular')}}</p>
         </b-col>
         <b-col cols="4">
-            <p class="sidebar-nav mb-0 text-center">Top Rated</p>
+            <p class="sidebar-nav mb-0 text-center">{{$t('sidebar.TopRated')}}</p>
         </b-col>
         <b-col cols="4">
-            <p class="sidebar-nav mb-0 text-center">Comments</p>
+            <p class="sidebar-nav mb-0 text-center">{{$t('sidebar.Comments')}}</p>
         </b-col>
         </b-row>
         
-        <app-news newsCategory="News" type="3" numberOfNews="10" color="white"></app-news>
+        <app-news newsCategory="News" selectedCountry="us" type="3" numberOfNews="10" color="white"></app-news>
         
     </b-container>
 </template>

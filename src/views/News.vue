@@ -4,7 +4,7 @@
         <b-container>
             <b-row>
                 <b-col lg="8" cols="12" class="mt30px">
-                    <app-news newsCategory="News" type="2" numberOfNews="10" color="white"></app-news>
+                    <app-news newsCategory="News" selectedCountry="us" type="2" numberOfNews="10" color="white"></app-news>
                 </b-col>
                 <b-col lg="4" cols="12" class="mt30px">
                     <app-sidebar></app-sidebar>
@@ -39,6 +39,9 @@ export default {
         "app-sidebar": Sidebar,
         "app-header": Header,
         "app-news": News
+    },
+    created(){
+        window.scrollTo(0,0)
     }
 }
 </script>

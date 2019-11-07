@@ -4,7 +4,8 @@
         <b-container>
             <b-row>
                 <b-col lg="8" cols="12" class="mt30px">
-                    <app-news newsCategory="Health" type="2" numberOfNews="10" color="white" :searchValue="searchValue"></app-news>
+                    <i v-if="searchValue != undefined">{{$t('YourSearch')}}: <span class="text-gray3">{{searchValue}}</span> </i>
+                    <app-news newsCategory="Health" selectedCountry="us" type="2" numberOfNews="10" color="white" :searchValue="searchValue"></app-news>
                 </b-col>
                 <b-col lg="4" cols="12" class="mt30px">
                     <app-sidebar></app-sidebar>
@@ -49,6 +50,9 @@ export default {
         "app-sidebar": Sidebar,
         "app-header": Header,
         "app-news": News
+    },
+    created(){
+        window.scrollTo(0,0)
     }
 }
 </script>

@@ -1,0 +1,39 @@
+{
+  "navigation" : {
+      "news" : "NEWS",
+      "business" : "BUSINESS",
+      "entertainment" : "ENTERTAINMENT",
+      "general" : "GENERAL",
+      "health" : "HEALTH",
+      "science" : "SCIENCE",
+      "sports" : "SPORTS",
+      "technology" : "TECHNOLOGY"
+  },
+    "see-all" : "See all",
+    "News" : "News",
+    "Business" : "Business",
+    "Entertainment" : "Entertainment",
+    "General" : "General",
+    "Health" : "Health",
+    "Science" : "Science",
+    "Sports" : "Sports",
+    "Technology" : "Technology",
+    "World": "World",
+    "Germany": "Germany",
+    "Local news": "Local news",
+    "ReadArticle": "Read Article",
+    "Author": "Author",
+    "NoResults": "No results found !",
+    "YourSearch" : "Your search",
+    "Subscribe": "Subscribe",
+    "FooterCopyRight": "Produly made at Plava Tvornica Croatia",
+    "AboutTheAuthor": "About the Author",
+    "Comments": "Comments",
+    "AddYourComments": "Add your comments",
+    
+    "sidebar": {
+      "Popular" : "Popular",
+      "TopRated": "Top Rated",
+      "Comments": "Comments"
+    }
+}
