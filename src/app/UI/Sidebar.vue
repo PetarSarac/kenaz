@@ -12,7 +12,7 @@
         </b-col>
         </b-row>
         
-        <app-news newsCategory="News" selectedCountry="us" type="3" numberOfNews="10" color="white"></app-news>
+        <app-news newsCategory="News" selectedCountry="us" type="3" numberOfNews="5" color="white"></app-news>
         
     </b-container>
 </template>

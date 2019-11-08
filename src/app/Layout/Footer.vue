@@ -90,11 +90,28 @@
                     </div>  
                 </b-col>
             </b-row>
-          </b-container>
+          </b-container>  
         </b-col>
       </b-row>
       
       
+    </b-container>
+
+    <b-container>
+      <b-row class="mt-4 footer-news">
+        <b-col md="4" cols="12" class="mt-sm-4">
+          <h4>Featured</h4>
+          <app-news newsCategory="Entertainment" selectedCountry="us" type="6" numberOfNews="3" color="white"></app-news>
+        </b-col>
+        <b-col md="4" cols="12" class="mt-sm-4">
+          <h4>Random</h4>
+          <app-news newsCategory="News" selectedCountry="us" type="6" numberOfNews="3" color="white"></app-news>
+        </b-col>
+        <b-col md="4" cols="12" class="mt-sm-4">
+          <h4>Recently</h4>
+          <app-news type="7" numberOfNews="3"></app-news>
+        </b-col>
+      </b-row>
     </b-container>
 
     <hr class="bg-gray2">
@@ -112,6 +129,15 @@
 </footer>
 </template>
 
+<script>
+import News from '../Objects/News'
+
+export default {
+  components: {
+    "app-news": News
+  }
+}
+</script>
 <style lang="scss">
 footer {
   background-color: var(--gray-dark);
@@ -184,5 +210,9 @@ footer {
     color: white;
     background-color: #3e3668;
   }
+}
+
+.footer-news {
+  font-size: 12px;
 }
 </style>

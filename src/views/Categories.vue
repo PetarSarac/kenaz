@@ -5,7 +5,7 @@
             <b-row>
                 <b-col lg="8" cols="12" class="mt30px">
                     <i v-if="searchValue != undefined">{{$t('YourSearch')}}: <span class="text-gray3">{{searchValue}}</span> </i>
-                    <app-news newsCategory="Sports" selectedCountry="us" type="2" numberOfNews="10" color="white" :searchValue="searchValue"></app-news>
+                    <app-news :newsCategory="newsCategory" selectedCountry="us" type="2" numberOfNews="10" color="white" :searchValue="searchValue" ref="newsApp"></app-news>
                 </b-col>
                 <b-col lg="4" cols="12" class="mt30px">
                     <app-sidebar></app-sidebar>
@@ -29,20 +29,15 @@
 </template>
 
 <script>
-import Header from '../components/Layout/Header'
-import Footer from '../components/Layout/Footer'
-import Sidebar from '../components/UI/Sidebar'
-import News from '../components/Objects/News'
+import Header from '../app/Layout/Header'
+import Footer from '../app/Layout/Footer'
+import Sidebar from '../app/UI/Sidebar'
+import News from '../app/Objects/News'
 
 export default {
     data(){
         return {
             searchValue: this.$route.query.q
-        }
-    },
-    watch: {
-        '$route.query.q'() {
-            this.searchValue = this.$route.query.q
         }
     },
     components: {
@@ -51,8 +46,21 @@ export default {
         "app-header": Header,
         "app-news": News
     },
+    computed: {
+        newsCategory(){
+            return this.$route.params.category
+        }
+    },
     created(){
         window.scrollTo(0,0)
+    },
+    watch: {
+        '$route.query.q'() {
+            this.searchValue = this.$route.query.q
+        } ,
+        '$route.params.category'(){
+            
+        }
     }
 }
 </script>

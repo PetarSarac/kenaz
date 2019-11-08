@@ -156,9 +156,9 @@
 </template>
 
 <script>
-import Footer from '../components/Layout/Footer'
-import Sidebar from '../components/UI/Sidebar'
-//import News from '../components/News'
+import Footer from '../app/Layout/Footer'
+import Sidebar from '../app/UI/Sidebar'
+
 
 export default {
     data(){
@@ -169,14 +169,25 @@ export default {
     components: {
         "app-footer": Footer,
         "app-sidebar": Sidebar,
-        //"app-news": News
     },
     created() {
         window.scrollTo(0,0)
         if(this.article.article == undefined) {
             this.$router.push({name: 'home'})
         }
-    }
+        if(localStorage.articles){
+            let oldArticles = JSON.parse(localStorage.getItem("articles"))
+            oldArticles.unshift(this.article)
+            localStorage.setItem("articles", JSON.stringify(oldArticles))
+        }else {
+            let newArticles = []
+            newArticles.push(this.article)
+            localStorage.setItem("articles", JSON.stringify(newArticles)) 
+        }
+        
+        
+    },
+    
 }
 </script>
 

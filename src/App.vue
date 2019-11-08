@@ -6,8 +6,7 @@
 </template>
 
 <script>
-import Navigation from './components/UI/Navigation'
-
+import Navigation from './app/UI/Navigation'
 export default {
   components: {
     "app-nav":Navigation

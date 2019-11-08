@@ -1,10 +1,7 @@
 <template>
     <b-row class="mt-4">
-      <b-col>
-            
-          <app-news newsCategory="Sports" selectedCountry="us" type="4" numberOfNews="5" color="white"></app-news>
-          
-        
+      <b-col>     
+        <app-news newsCategory="Sports" selectedCountry="us" type="4" numberOfNews="5" color="white"></app-news>
       </b-col>
     </b-row>
 </template>

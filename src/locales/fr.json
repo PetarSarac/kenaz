@@ -1,0 +1,39 @@
+{
+    "navigation" : {
+        "news" : "NEWS",
+        "business" : "ENTREPRISE",
+        "entertainment" : "DIVERTISSEMENT",
+        "general" : "GÉNÉRALE",
+        "health" : "SANTÉ",
+        "science" : "SCIENCE",
+        "sports" : "DES SPORTS",
+        "technology" : "LA TECHNOLOGIE"
+    },
+      "see-all" : "Voir tout",
+      "News" : "News",
+      "Business" : "Entreprise",
+      "Entertainment" : "Divertissement",
+      "General" : "Générale",
+      "Health" : "Santé",
+      "Science" : "Science",
+      "Sports" : "Des sports",
+      "Technology" : "La technologie",
+      "World": "Monde",
+      "Germany": "Germany",
+      "Local news": "Nouvelles locales",
+      "ReadArticle": "Lire l'article",
+      "Author": "Auteure",
+      "NoResults": "Aucun résultat trouvé!",
+      "YourSearch" : "Votre recherche",
+      "Subscribe": "Subscribe",
+      "FooterCopyRight": "Fabriqué à Plava Tvornica en Croatie",
+      "AboutTheAuthor": "A propos de l'auteur",
+      "Comments": "Commentaires",
+      "AddYourComments": "Ajouter vos commentaires",
+      
+      "sidebar": {
+        "Popular" : "Popular",
+        "TopRated": "Top Rated",
+        "Comments": "Comments"
+      }
+  }
