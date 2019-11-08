@@ -1,0 +1,24 @@
+p,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        font-size: 80% !important;
+    }
+}
+a:hover {
+    text-decoration: none !important;
+}
+
+
+
+//Custom utilities
+
+.mt30px {
+    margin-top: 30px !important;
+}
+
+.mb30px {
+    margin-bottom: 30px !important;
+}
