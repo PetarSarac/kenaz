@@ -1,0 +1,124 @@
+.navbar {
+    padding: 0 !important;
+}
+
+.nav-item {
+    padding: .6rem;
+    font-weight: bold;
+    transition: all .3s;
+
+    &-border {
+        &--news {
+            border-bottom: 3px solid var(--light-blue);
+            &.router-link-active {
+                background-color: var(--light-blue);
+            }
+            &:hover {
+                background-color: var(--light-blue);
+            }
+        }
+        &--business {
+            border-bottom: 3px solid var(--red);
+            &.router-link-active {
+                background-color: var(--red);
+            }
+            &:hover {
+                background-color: var(--red);
+            }
+        }
+        &--entertainment {
+            border-bottom: 3px solid var(--green);
+            &.router-link-active {
+                background-color: var(--green);
+            }
+            &:hover {
+                background-color: var(--green);
+            }
+        }
+        &--general {
+            border-bottom: 3px solid var(--blue);
+            &.router-link-active {
+                background-color: var(--blue);
+            }
+            &:hover {
+                background-color: var(--blue);
+            }
+        }
+        &--health {
+            border-bottom: 3px solid var(--yellow);
+            &.router-link-active {
+                background-color: var(--yellow);
+            }
+            &:hover {
+                background-color: var(--yellow);
+            }
+        }
+        &--science {
+            border-bottom: 3px solid var(--brown);
+            &.router-link-active {
+                background-color: var(--brown);
+            }
+            &:hover {
+                background-color: var(--brown);
+            }
+        }
+        &--sports {
+            border-bottom: 3px solid orange;
+            &.router-link-active {
+                background-color: orange;
+            }
+            &:hover {
+                background-color: orange;
+            }
+        }
+        &--technology {
+            border-bottom: 3px solid chartreuse;
+            &.router-link-active {
+                background-color: chartreuse;
+            }
+            &:hover {
+                background-color: chartreuse;
+            }
+        }
+    }
+}
+
+.nav-link {
+    color:white !important;
+}
+
+
+.search-box {
+    cursor: pointer;
+    margin-right: -15px;
+    &:hover {
+        background-color: var(--primary) !important;
+    }
+}
+
+.search-form {
+    width: 0px;
+    transition: all .3s;
+
+    &--active {
+        width: 400px;
+
+        @media only screen and (max-width: 600px) {
+            justify-content: end;
+            width: 220px;
+        }
+
+        & input {
+            @media only screen and (max-width: 600px) {
+                width: 100px;
+            }
+        }
+
+        & select {
+            @media only screen and (max-width: 600px) {
+                width: 100px;
+            }
+        }
+
+    }
+}

@@ -27,32 +27,4 @@ export default {
 }
 </script>
 <style lang="scss">
-
-.sidebar-nav {
-  cursor: pointer;
-  transition: all .3s;
-  border-bottom: 1px solid var(--primary);
-
-  &--active {
-      color: var(--yellow);
-      border-bottom: 1px solid var(--yellow);
-  }
-  &:hover {
-    color: var(--yellow);
-    border-bottom: 1px solid var(--yellow);
-  }
-
-}
-.sidebar-img {
-  width: 100%;
-}
-
-.sidebar-item{
-  cursor: pointer;
-  transition: all .3s;
-
-  &:hover {
-    background-color: #3e3668 !important;
-  }
-}
 </style>
